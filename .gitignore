@@ -1,0 +1,50 @@
+# Compiled files
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Binary files
+*.bin
+
+# Dependency directories (remove if using dep or Go Modules)
+/vendor/
+/Godeps/
+/.glide/
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+/coverage.out
+
+# Ignore any local development config files
+/config.local.json
+
+# Ignore the build directory
+/build/
+
+# Ignore the .env file which may contain sensitive information
+/.env
+
+# Ignore any logs or temporary files
+*.log
+*.log.*
+*.tmp
+
+# Ignore any generated documentation
+/doc/
+/docs/
+
+# Ignore binary files from version control
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.ico
+*.woff
+*.woff2
+*.ttf
+*.eot
+*.pdf
+
+# Ignore the binary built by the go tool
+/bin/
