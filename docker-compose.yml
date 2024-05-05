@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  # app:
+  #   build: .
+  #   ports:
+  #     - "8080:8080"
+  #   volumes:
+  #     - .:/app
+  #   command: ["gin", "run"]
+  #   depends_on:
+  #     - postgres
+
+  postgres:
+    image: postgres:latest
+    restart: always
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - "5432:5432"
