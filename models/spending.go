@@ -10,7 +10,7 @@ import (
 type Spending struct {
 	ID          int       `json:"id"`
 	Description string    `json:"description" validate:"required"`
-	Amount      float64   `json:"amount" validate:"required"`
+	Amount      float64   `json:"amount" validate:"required,numeric,gt=0"`
 	GroupID     int       `json:"groupId"`
 	EventID     int       `json:"eventId" validate:"required"`
 	Status      string    `json:"status" validate:"required"`
