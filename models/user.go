@@ -1,0 +1,19 @@
+package models
+
+import (
+	"github.com/go-playground/validator"
+)
+
+type User struct {
+	ID        int    `json:"id"`
+	FirstName string `json:"firstName" validate:"required"`
+	LastName  string `json:"lastName"`
+	Username  string `json:"username" validate:"required"`
+	Email     string `json:"email" validate:"required,email"`
+	Password  string `json:"password" validate:"required,min=8,regexp=[A-Za-z0-9]+"`
+}
+
+func validateUser(user User) error {
+	validate := validator.New()
+	return validate.Struct(user)
+}
