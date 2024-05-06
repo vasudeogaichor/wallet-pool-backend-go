@@ -1,4 +1,4 @@
-package models
+package validators
 
 import (
 	"time"
@@ -12,6 +12,7 @@ type User struct {
 	LastName  string    `json:"lastName"`
 	Username  string    `json:"username" validate:"required"`
 	Email     string    `json:"email" validate:"required,email"`
+	Mobile    string    `json:"mobile" validate:"len=10,digits"`
 	Password  string    `json:"password" validate:"required,min=8,regexp=[A-Za-z0-9]+"`
 	CreatedAt time.Time `json:"createdAt"`
 	DeletedAt time.Time `json:"deletedAt"`
