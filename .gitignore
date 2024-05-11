@@ -48,3 +48,4 @@
 
 # Ignore the binary built by the go tool
 /bin/
+/tmp
