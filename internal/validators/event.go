@@ -3,7 +3,7 @@ package validators
 import (
 	"time"
 
-	"github.com/go-playground/validator"
+	"github.com/go-playground/validator/v10"
 )
 
 // Event represents an event such as a movie outing

@@ -3,7 +3,7 @@ package validators
 import (
 	"time"
 
-	"github.com/go-playground/validator"
+	"github.com/go-playground/validator/v10"
 )
 
 // Question refers to a discussion for a spending when someone disagrees with it

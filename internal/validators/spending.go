@@ -3,7 +3,7 @@ package validators
 import (
 	"time"
 
-	"github.com/go-playground/validator"
+	"github.com/go-playground/validator/v10"
 )
 
 // Spending represents the instance when someone in the group spent any amount for the group
