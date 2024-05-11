@@ -3,7 +3,7 @@ package validators
 import (
 	"time"
 
-	"github.com/go-playground/validator"
+	"github.com/go-playground/validator/v10"
 )
 
 type User struct {
@@ -12,8 +12,8 @@ type User struct {
 	LastName  string    `json:"lastName"`
 	Username  string    `json:"username" validate:"required"`
 	Email     string    `json:"email" validate:"required,email"`
-	Mobile    string    `json:"mobile" validate:"len=10,digits"`
-	Password  string    `json:"password" validate:"required,min=8,regexp=[A-Za-z0-9]+"`
+	Mobile    string    `json:"mobile" validate:"len=10,numeric"`
+	Password  string    `json:"password" validate:"required,min=8"`
 	CreatedAt time.Time `json:"createdAt"`
 	DeletedAt time.Time `json:"deletedAt"`
 }
